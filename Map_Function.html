@@ -8,17 +8,45 @@
 <body>
 <script type="text/javascript">
 
-	//Map Fuction help us to perform action of all element of array or object of array
+	// Map Fuction help us to print of all element of array or perform action of element or object of array
+     // It doesnot change to original array (arr1) ir return a new array.
+     // Map method call a provided Callback function once for each element in an array, in an order and return a new array from the result.
+     //map (callback(current_value,index_value,array),thisArg);
      
-     // arr1 = [2, 3, 4, 5, 6]
+
+     //EXAMPLE 1ST
+      /*
+      arr1 = [2, 3, 4, 5, 6]
+      arr2= arr1.map((test)=>{
+      return test * 10
+      
+          
+      })
+      document.write(arr2);
+      */
+
+
+//EXAMPLE 2ND
+/*
      arr1 = [
      {fname : "Yuvraj", lname : "Singh"},
-     {fname : "Uma", lname : "Thakur"}
+     {fname : "Uma",    lname : "Thakur"}
      ];
      arr2 =arr1.map((anyname)=>{
-          // return anyname * 4});
-           return anyname.fname+ " " + anyname.lname});
+
+      return anyname.fname+ " " + anyname.lname
+ });
      document.write(arr2);
+*/
+  //EXAMPLE 1ST
+  // We can print index value (y) also
+   arr1 = [2, 3, 4, 5, 6]
+   arr2 = arr1.map(function(test,y){
+
+    console.log(test*10,y);
+    
+   });
+   console.log(arr1);
 </script>
 </body>
 </html>
